@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  line-height: auto;
+}
+
+nav {
+  background-color: #eee;
+  padding: 0 1rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+}
+
+nav ul li {
+  padding: 0;
+}
+
+nav > ul {
+  grid-auto-flow: column;
+}
+
+nav > ul > li {
+  margin: 0 .5rem;
+}
+
+nav > ul > li a,
+nav > ul > li .dropdown__title {
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  color: blue;
+  font-size: 1.125rem;
+}
+
+nav > ul > li > a,
+nav > ul > li .dropdown__title {
+  padding: 1rem .5rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropdown__title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  pointer-events: none;
+}
+
+.dropdown .dropdown__title::after {
+  content: "";
+  border: .35rem solid transparent;
+  border-top-color: rgba(0, 0, 255, 0.45);
+  margin-top: .15rem;
+  margin-left: .25rem;
+  -webkit-transform: translateY(0.15rem);
+          transform: translateY(0.15rem);
+}
+
+.dropdown .dropdown__menu {
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0.15rem 0.25rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.15rem 0.25rem rgba(0, 0, 0, 0.25);
+  padding: .5rem 0;
+  min-width: 15ch;
+  position: absolute;
+  top: calc(100% - .25rem);
+  left: 50%;
+  -webkit-transform: rotateX(-90deg) translateX(-50%);
+          transform: rotateX(-90deg) translateX(-50%);
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  opacity: .3;
+  -webkit-transition: 280ms all 120ms ease-out;
+  transition: 280ms all 120ms ease-out;
+}
+
+.dropdown .dropdown__menu a {
+  color: #444;
+  display: block;
+  padding: .5rem;
+}
+
+.dropdown:hover .dropdown__menu, .dropdown:focus-within .dropdown__menu {
+  opacity: 1;
+  -webkit-transform: rotateX(0) translateX(-50%);
+          transform: rotateX(0) translateX(-50%);
+}
+/*# sourceMappingURL=style.css.map */

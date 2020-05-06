@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example: Dropdown</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+    
+    <nav aria-label="Navigation">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li class="dropdown">
+                <span class="dropdown__title" id="dropdown-title" tabindex="-1">Sweets</span>
+                <ul class="dropdown__menu" aria-labelledby="dropdown-title">
+                    <li><a href="#">Donuts</a></li>
+                    <li><a href="#">Cupcakes</a></li>
+                    <li><a href="#">Chocolate</a></li>
+                    <li><a href="#">Bonbons</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Order</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
